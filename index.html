@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зміна кольору тексту</title>
+<style>
+  #text-block {
+    font-size: 18px;
+    margin: auto;    
+  }
+</style>
+</head>
+<body>
+
+<div id="text-block">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, maxime.</p>
+</div>
+
+<button id="color-button">Click me to switch colour!!!</button>
+
+<script>
+  const textBlock = document.getElementById('text-block');
+  const colorButton = document.getElementById('color-button');
+
+  let currentColor = 'black';
+  
+  colorButton.addEventListener('click', function() {
+  
+    if (currentColor === 'black') {
+      textBlock.style.color = 'red';
+      currentColor = 'red';
+    } else {
+      textBlock.style.color = 'black';
+      currentColor = 'black';
+    }
+  });
+</script>
+
+</body>
+</html>
